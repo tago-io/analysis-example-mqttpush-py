@@ -18,7 +18,8 @@ from tago import Services
 
 # The function myAnalysis will run when you execute your analysis
 def myAnalysis(context,scope):
-  my_data_bucket = scope[0]['bucket']
+  # my_data_bucket = scope[0]['bucket'] # for legacy
+  my_data_bucket = scope[0]['device'] # for immutable/mutable
   my_data_value = scope[0]['value']
   # Create your data object to push to MQTT
   # In this case we're sending a JSON.
